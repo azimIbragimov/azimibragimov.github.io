@@ -16,11 +16,11 @@ let determineComputedTheme = () => {
   if (themeSetting != "system") {
     return themeSetting;
   }
-  return (userPref && userPref("(prefers-color-scheme: dark)").matches) ? "dark" : "light";
+  return (userPref && userPref("(prefers-color-scheme: dark)").matches) ? "light" : "light";
 };
 
 // detect OS/browser preference
-const browserPref = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+const browserPref = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'light' : 'light';
 
 // Set the theme on page load or when explicitly called
 let setTheme = (theme) => {
